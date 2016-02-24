@@ -15,5 +15,8 @@
 @property (nonatomic ,strong)NSString *str2;
 
 @property (nonatomic ,strong)NSString *str3;
+
+@property (nonatomic ,strong)NSString *str4;
+
 @end
 
