@@ -1378,6 +1378,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B70612721C7F4F48005D2A65 /* emMeituanHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanHeader.h; sourceTree = "<group>"; };
+		B70612731C7F4F57005D2A65 /* emMeituanPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanPrefixHeader.pch; sourceTree = "<group>"; };
 		B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7BC51DC1C7DF4C90045DE19 /* EMTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMTabBar.h; sourceTree = "<group>"; };
 		B7BC51DD1C7DF4C90045DE19 /* EMTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMTabBar.m; sourceTree = "<group>"; };
@@ -2817,6 +2819,8 @@
 		D2B3117F1C7D6DF500347D26 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B70612731C7F4F57005D2A65 /* emMeituanPrefixHeader.pch */,
+				B70612721C7F4F48005D2A65 /* emMeituanHeader.h */,
 				D2B311B21C7D731000347D26 /* Resource */,
 				D2B311801C7D6DF500347D26 /* main.m */,
 			);
@@ -5817,6 +5821,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EMMeituan/emMeituanPrefixHeader.pch";
 				INFOPLIST_FILE = EMMeituan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = easemob.EMMeituan;
@@ -5829,6 +5834,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/EMMeituan/emMeituanPrefixHeader.pch";
 				INFOPLIST_FILE = EMMeituan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = easemob.EMMeituan;
