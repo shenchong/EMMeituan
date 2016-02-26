@@ -1358,6 +1358,8 @@
 		D2B31C291C7D732300347D26 /* userreview_newshareweixin_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2B316ED1C7D732200347D26 /* userreview_newshareweixin_normal@2x.png */; };
 		D2B31C2A1C7D732300347D26 /* userreview_newshareweixin_press@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2B316EE1C7D732200347D26 /* userreview_newshareweixin_press@2x.png */; };
 		D2B31C2E1C7D74BD00347D26 /* EMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B31C2D1C7D74BD00347D26 /* EMTabBarController.m */; };
+		D2EEAC771C7ED6F200767BFC /* homeServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EEAC751C7ED6F200767BFC /* homeServiceViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D2EEAC781C7ED6F200767BFC /* homeServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2EEAC761C7ED6F200767BFC /* homeServiceViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2740,6 +2742,11 @@
 		D2B316EE1C7D732200347D26 /* userreview_newshareweixin_press@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userreview_newshareweixin_press@2x.png"; sourceTree = "<group>"; };
 		D2B31C2C1C7D74BD00347D26 /* EMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMTabBarController.h; sourceTree = "<group>"; };
 		D2B31C2D1C7D74BD00347D26 /* EMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMTabBarController.m; sourceTree = "<group>"; };
+		D2EEAC741C7ED6F200767BFC /* homeServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeServiceViewController.h; sourceTree = "<group>"; };
+		D2EEAC751C7ED6F200767BFC /* homeServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeServiceViewController.m; sourceTree = "<group>"; };
+		D2EEAC761C7ED6F200767BFC /* homeServiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = homeServiceViewController.xib; sourceTree = "<group>"; };
+		D2EEAC7A1C7EF50E00767BFC /* emMeituanHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanHeader.h; sourceTree = "<group>"; };
+		D2EEAC7B1C7F08AA00767BFC /* emMeituanPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanPrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2799,7 +2806,9 @@
 		D2B3117E1C7D6DF500347D26 /* EMMeituan */ = {
 			isa = PBXGroup;
 			children = (
+				D2EEAC791C7EF31700767BFC /* tool */,
 				B7BC51DF1C7DF5740045DE19 /* Category */,
+				D2EEAC701C7ED58A00767BFC /* homeService */,
 				D2B31C2B1C7D747400347D26 /* Main */,
 				D2B311821C7D6DF500347D26 /* AppDelegate.h */,
 				D2B311831C7D6DF500347D26 /* AppDelegate.m */,
@@ -2819,6 +2828,7 @@
 			children = (
 				D2B311B21C7D731000347D26 /* Resource */,
 				D2B311801C7D6DF500347D26 /* main.m */,
+				D2EEAC7B1C7F08AA00767BFC /* emMeituanPrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -4199,6 +4209,26 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		D2EEAC701C7ED58A00767BFC /* homeService */ = {
+			isa = PBXGroup;
+			children = (
+				D2EEAC741C7ED6F200767BFC /* homeServiceViewController.h */,
+				D2EEAC751C7ED6F200767BFC /* homeServiceViewController.m */,
+				D2EEAC761C7ED6F200767BFC /* homeServiceViewController.xib */,
+			);
+			name = homeService;
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D2EEAC791C7EF31700767BFC /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				D2EEAC7A1C7EF50E00767BFC /* emMeituanHeader.h */,
+			);
+			name = tool;
+			path = ..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -5528,6 +5558,7 @@
 				D2B31AEE1C7D732300347D26 /* icon_plainImage_listcell_roundcorner@2x.png in Resources */,
 				D2B31A461C7D732300347D26 /* icon_merchant_share_normal.png in Resources */,
 				D2B316F01C7D732200347D26 /* about_praise@2x.png in Resources */,
+				D2EEAC781C7ED6F200767BFC /* homeServiceViewController.xib in Resources */,
 				D2B31BC11C7D732300347D26 /* line_route_separator@2x.png in Resources */,
 				D2B31C0E1C7D732300347D26 /* share_logo_sms.png in Resources */,
 				D2B31B351C7D732300347D26 /* icon_route_car_selected@2x.png in Resources */,
@@ -5672,6 +5703,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2EEAC771C7ED6F200767BFC /* homeServiceViewController.m in Sources */,
 				B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */,
 				D2B311871C7D6DF500347D26 /* ViewController.m in Sources */,
 				B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */,
@@ -5768,7 +5800,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -5805,7 +5837,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -5817,7 +5849,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "/Users/easemob/Documents/自学/EMMeituan/EMMeituan/EMMeituan/emMeituanPrefixHeader.pch";
 				INFOPLIST_FILE = EMMeituan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = easemob.EMMeituan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5829,7 +5863,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "/Users/easemob/Documents/自学/EMMeituan/EMMeituan/EMMeituan/emMeituanPrefixHeader.pch";
 				INFOPLIST_FILE = EMMeituan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = easemob.EMMeituan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
