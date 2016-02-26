@@ -8,6 +8,7 @@
 
 #import "EMTabBarController.h"
 #import "EMTabBar.h"
+#import "EMMoreViewController.h"
 
 @interface EMTabBarController ()
 
@@ -49,7 +50,7 @@
     UIViewController *mineVC = [[UIViewController alloc]init];
     [self addChildViewControllerWithTitle:@"我的" Image:@"icon_tabbar_mine" Controller:mineVC];
     
-    UIViewController *moreVC = [[UIViewController alloc]init];
+    EMMoreViewController *moreVC = [[EMMoreViewController alloc]init];
     [self addChildViewControllerWithTitle:@"更多" Image:@"icon_tabbar_misc" Controller:moreVC];
 }
 
