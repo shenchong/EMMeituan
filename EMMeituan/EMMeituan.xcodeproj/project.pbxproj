@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B70612781C7F55D7005D2A65 /* EMMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B70612771C7F55D7005D2A65 /* EMMoreViewController.m */; };
+		B78CBD8E1C816F0D00D2BEC0 /* homeServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78CBD8C1C816F0D00D2BEC0 /* homeServiceViewController.m */; };
+		B78CBD8F1C816F0D00D2BEC0 /* homeServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78CBD8D1C816F0D00D2BEC0 /* homeServiceViewController.xib */; };
 		B7BC51DB1C7DF3F50045DE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */; };
 		B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51DD1C7DF4C90045DE19 /* EMTabBar.m */; };
 		B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51E11C7DF59A0045DE19 /* UIView+extension.m */; };
@@ -1383,6 +1385,9 @@
 		B70612731C7F4F57005D2A65 /* emMeituanPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanPrefixHeader.pch; sourceTree = "<group>"; };
 		B70612761C7F55D7005D2A65 /* EMMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMoreViewController.h; sourceTree = "<group>"; };
 		B70612771C7F55D7005D2A65 /* EMMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMoreViewController.m; sourceTree = "<group>"; };
+		B78CBD8B1C816F0D00D2BEC0 /* homeServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeServiceViewController.h; sourceTree = "<group>"; };
+		B78CBD8C1C816F0D00D2BEC0 /* homeServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeServiceViewController.m; sourceTree = "<group>"; };
+		B78CBD8D1C816F0D00D2BEC0 /* homeServiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = homeServiceViewController.xib; sourceTree = "<group>"; };
 		B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7BC51DC1C7DF4C90045DE19 /* EMTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMTabBar.h; sourceTree = "<group>"; };
 		B7BC51DD1C7DF4C90045DE19 /* EMTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMTabBar.m; sourceTree = "<group>"; };
@@ -2781,6 +2786,16 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		B78CBD8A1C816EEF00D2BEC0 /* homeService */ = {
+			isa = PBXGroup;
+			children = (
+				B78CBD8B1C816F0D00D2BEC0 /* homeServiceViewController.h */,
+				B78CBD8C1C816F0D00D2BEC0 /* homeServiceViewController.m */,
+				B78CBD8D1C816F0D00D2BEC0 /* homeServiceViewController.xib */,
+			);
+			path = homeService;
+			sourceTree = "<group>";
+		};
 		B7BC51DF1C7DF5740045DE19 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -2815,6 +2830,7 @@
 			children = (
 				B70612751C7F5587005D2A65 /* More */,
 				B7BC51DF1C7DF5740045DE19 /* Category */,
+				B78CBD8A1C816EEF00D2BEC0 /* homeService */,
 				D2B31C2B1C7D747400347D26 /* Main */,
 				D2B311821C7D6DF500347D26 /* AppDelegate.h */,
 				D2B311831C7D6DF500347D26 /* AppDelegate.m */,
@@ -5545,6 +5561,7 @@
 				D2B31AEE1C7D732300347D26 /* icon_plainImage_listcell_roundcorner@2x.png in Resources */,
 				D2B31A461C7D732300347D26 /* icon_merchant_share_normal.png in Resources */,
 				D2B316F01C7D732200347D26 /* about_praise@2x.png in Resources */,
+				B78CBD8F1C816F0D00D2BEC0 /* homeServiceViewController.xib in Resources */,
 				D2B31BC11C7D732300347D26 /* line_route_separator@2x.png in Resources */,
 				D2B31C0E1C7D732300347D26 /* share_logo_sms.png in Resources */,
 				D2B31B351C7D732300347D26 /* icon_route_car_selected@2x.png in Resources */,
@@ -5696,6 +5713,7 @@
 				D2B31C2E1C7D74BD00347D26 /* EMTabBarController.m in Sources */,
 				D2B311841C7D6DF500347D26 /* AppDelegate.m in Sources */,
 				D2B311811C7D6DF500347D26 /* main.m in Sources */,
+				B78CBD8E1C816F0D00D2BEC0 /* homeServiceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5837,6 +5855,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EMMeituan/emMeituanPrefixHeader.pch";
 				INFOPLIST_FILE = EMMeituan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = easemob.EMMeituan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5850,6 +5869,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EMMeituan/emMeituanPrefixHeader.pch";
 				INFOPLIST_FILE = EMMeituan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = easemob.EMMeituan;
 				PRODUCT_NAME = "$(TARGET_NAME)";

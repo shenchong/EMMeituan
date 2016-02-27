@@ -8,6 +8,7 @@
 
 #import "EMTabBarController.h"
 #import "EMTabBar.h"
+#import "homeServiceViewController.h"
 #import "EMMoreViewController.h"
 
 @interface EMTabBarController ()
@@ -41,7 +42,7 @@
     UIViewController *homeVC = [[UIViewController alloc]init];
     [self addChildViewControllerWithTitle:@"首页" Image:@"icon_tabbar_homepage" Controller:homeVC];
     
-    UIViewController *worthVC = [[UIViewController alloc]init];
+    homeServiceViewController *worthVC = [[homeServiceViewController alloc]init];
     [self addChildViewControllerWithTitle:@"值得去" Image:@"icon_tabbar_worthgoing" Controller:worthVC];
     
     UIViewController *shopVC = [[UIViewController alloc]init];
