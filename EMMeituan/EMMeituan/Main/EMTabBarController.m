@@ -10,6 +10,7 @@
 #import "EMTabBar.h"
 #import "homeServiceViewController.h"
 #import "EMMoreViewController.h"
+#import "EMMerchantViewController.h"
 
 @interface EMTabBarController ()
 
@@ -45,7 +46,7 @@
     homeServiceViewController *worthVC = [[homeServiceViewController alloc]init];
     [self addChildViewControllerWithTitle:@"值得去" Image:@"icon_tabbar_worthgoing" Controller:worthVC];
     
-    UIViewController *shopVC = [[UIViewController alloc]init];
+    EMMerchantViewController *shopVC = [[EMMerchantViewController alloc]init];
     [self addChildViewControllerWithTitle:@"商家" Image:@"icon_tabbar_merchant" Controller:shopVC];
     
     UIViewController *mineVC = [[UIViewController alloc]init];

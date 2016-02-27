@@ -10,6 +10,9 @@
 		B70612781C7F55D7005D2A65 /* EMMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B70612771C7F55D7005D2A65 /* EMMoreViewController.m */; };
 		B78CBD8E1C816F0D00D2BEC0 /* homeServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78CBD8C1C816F0D00D2BEC0 /* homeServiceViewController.m */; };
 		B78CBD8F1C816F0D00D2BEC0 /* homeServiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78CBD8D1C816F0D00D2BEC0 /* homeServiceViewController.xib */; };
+		B78CBD931C817D6300D2BEC0 /* EMMerchantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78CBD921C817D6300D2BEC0 /* EMMerchantViewController.m */; };
+		B78CBD961C81E67600D2BEC0 /* EMMerchantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B78CBD951C81E67600D2BEC0 /* EMMerchantCell.m */; };
+		B78CBD991C81EF6000D2BEC0 /* EMMerchantModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B78CBD981C81EF6000D2BEC0 /* EMMerchantModel.m */; };
 		B7BC51DB1C7DF3F50045DE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */; };
 		B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51DD1C7DF4C90045DE19 /* EMTabBar.m */; };
 		B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51E11C7DF59A0045DE19 /* UIView+extension.m */; };
@@ -1388,6 +1391,12 @@
 		B78CBD8B1C816F0D00D2BEC0 /* homeServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeServiceViewController.h; sourceTree = "<group>"; };
 		B78CBD8C1C816F0D00D2BEC0 /* homeServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeServiceViewController.m; sourceTree = "<group>"; };
 		B78CBD8D1C816F0D00D2BEC0 /* homeServiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = homeServiceViewController.xib; sourceTree = "<group>"; };
+		B78CBD911C817D6300D2BEC0 /* EMMerchantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMerchantViewController.h; sourceTree = "<group>"; };
+		B78CBD921C817D6300D2BEC0 /* EMMerchantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMerchantViewController.m; sourceTree = "<group>"; };
+		B78CBD941C81E67600D2BEC0 /* EMMerchantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMerchantCell.h; sourceTree = "<group>"; };
+		B78CBD951C81E67600D2BEC0 /* EMMerchantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMerchantCell.m; sourceTree = "<group>"; };
+		B78CBD971C81EF6000D2BEC0 /* EMMerchantModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMerchantModel.h; sourceTree = "<group>"; };
+		B78CBD981C81EF6000D2BEC0 /* EMMerchantModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMMerchantModel.m; sourceTree = "<group>"; };
 		B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7BC51DC1C7DF4C90045DE19 /* EMTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMTabBar.h; sourceTree = "<group>"; };
 		B7BC51DD1C7DF4C90045DE19 /* EMTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMTabBar.m; sourceTree = "<group>"; };
@@ -2796,6 +2805,19 @@
 			path = homeService;
 			sourceTree = "<group>";
 		};
+		B78CBD901C817D0B00D2BEC0 /* Merchant */ = {
+			isa = PBXGroup;
+			children = (
+				B78CBD971C81EF6000D2BEC0 /* EMMerchantModel.h */,
+				B78CBD981C81EF6000D2BEC0 /* EMMerchantModel.m */,
+				B78CBD941C81E67600D2BEC0 /* EMMerchantCell.h */,
+				B78CBD951C81E67600D2BEC0 /* EMMerchantCell.m */,
+				B78CBD911C817D6300D2BEC0 /* EMMerchantViewController.h */,
+				B78CBD921C817D6300D2BEC0 /* EMMerchantViewController.m */,
+			);
+			path = Merchant;
+			sourceTree = "<group>";
+		};
 		B7BC51DF1C7DF5740045DE19 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -2828,10 +2850,11 @@
 		D2B3117E1C7D6DF500347D26 /* EMMeituan */ = {
 			isa = PBXGroup;
 			children = (
+				B78CBD901C817D0B00D2BEC0 /* Merchant */,
 				B70612751C7F5587005D2A65 /* More */,
-				B7BC51DF1C7DF5740045DE19 /* Category */,
 				B78CBD8A1C816EEF00D2BEC0 /* homeService */,
 				D2B31C2B1C7D747400347D26 /* Main */,
+				B7BC51DF1C7DF5740045DE19 /* Category */,
 				D2B311821C7D6DF500347D26 /* AppDelegate.h */,
 				D2B311831C7D6DF500347D26 /* AppDelegate.m */,
 				D2B311851C7D6DF500347D26 /* ViewController.h */,
@@ -5706,10 +5729,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78CBD991C81EF6000D2BEC0 /* EMMerchantModel.m in Sources */,
 				B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */,
 				D2B311871C7D6DF500347D26 /* ViewController.m in Sources */,
 				B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */,
 				B70612781C7F55D7005D2A65 /* EMMoreViewController.m in Sources */,
+				B78CBD931C817D6300D2BEC0 /* EMMerchantViewController.m in Sources */,
+				B78CBD961C81E67600D2BEC0 /* EMMerchantCell.m in Sources */,
 				D2B31C2E1C7D74BD00347D26 /* EMTabBarController.m in Sources */,
 				D2B311841C7D6DF500347D26 /* AppDelegate.m in Sources */,
 				D2B311811C7D6DF500347D26 /* main.m in Sources */,
