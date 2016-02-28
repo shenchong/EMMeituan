@@ -7,6 +7,9 @@
 //
 
 #import "HomeViewController.h"
+#import "MapViewController.h"
+#import "SearchViewController.h"
+#import "SanViewController.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -17,8 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-#warning TODO //改home页的背景颜色
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     //隐藏导航栏
     [self.navigationController setNavigationBarHidden:YES animated:YES];
@@ -88,24 +90,34 @@
 -(void)cityButtonClick:(UIButton *)cityBtn
 {
     NSLog(@"城市按钮被点击了，主人出去游玩，要换地方啦！");
+    
+    
 }
 
 //地图按钮的点击事件
 -(void)mapButtonClick:(UIButton *)mapBtn
 {
     NSLog(@"主人对这个城市不熟悉，要查一下具体位置啊");
+    MapViewController * mapVC = [[MapViewController alloc] init];
+    [self.navigationController pushViewController:mapVC animated:YES];
 }
 
 //搜索框按钮的点击事件
 -(void)searchViewButtonClick:(UIButton *)searchView
 {
     NSLog(@"主人想要搜索，热门服务快点过来啊！");
+    SearchViewController * searchVC = [[SearchViewController alloc] init];
+    [self.navigationController pushViewController:searchVC animated:YES];
+    
 }
 
 //扫一扫按钮的点击事件
 -(void)sanButtonClick:(UIButton *)sanBtn
 {
     NSLog(@"主人想要扫一扫哦，可能要付费咯！");
+    SanViewController * sanVC = [[SanViewController alloc] init];
+    [self.navigationController pushViewController:sanVC animated:YES];
+    
 }
 
 

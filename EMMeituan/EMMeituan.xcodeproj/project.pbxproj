@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		603992751C82D3DD00B05895 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603992741C82D3DD00B05895 /* HomeViewController.m */; };
+		6039927C1C82EFB500B05895 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6039927B1C82EFB500B05895 /* MapViewController.m */; };
+		6039927F1C82F01900B05895 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6039927E1C82F01900B05895 /* SearchViewController.m */; };
+		603992821C82F02D00B05895 /* SanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603992811C82F02D00B05895 /* SanViewController.m */; };
 		B7BC51DB1C7DF3F50045DE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */; };
 		B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51DD1C7DF4C90045DE19 /* EMTabBar.m */; };
 		B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51E11C7DF59A0045DE19 /* UIView+extension.m */; };
@@ -1381,6 +1384,12 @@
 /* Begin PBXFileReference section */
 		603992731C82D3DD00B05895 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		603992741C82D3DD00B05895 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		6039927A1C82EFB500B05895 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		6039927B1C82EFB500B05895 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		6039927D1C82F01900B05895 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		6039927E1C82F01900B05895 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		603992801C82F02D00B05895 /* SanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SanViewController.h; sourceTree = "<group>"; };
+		603992811C82F02D00B05895 /* SanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SanViewController.m; sourceTree = "<group>"; };
 		B70612721C7F4F48005D2A65 /* emMeituanHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanHeader.h; sourceTree = "<group>"; };
 		B70612731C7F4F57005D2A65 /* emMeituanPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanPrefixHeader.pch; sourceTree = "<group>"; };
 		B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -2785,6 +2794,7 @@
 		6039926F1C82D1B700B05895 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				603992761C82EE8400B05895 /* nav */,
 				603992731C82D3DD00B05895 /* HomeViewController.h */,
 				603992741C82D3DD00B05895 /* HomeViewController.m */,
 			);
@@ -2803,6 +2813,19 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		603992761C82EE8400B05895 /* nav */ = {
+			isa = PBXGroup;
+			children = (
+				6039927A1C82EFB500B05895 /* MapViewController.h */,
+				6039927B1C82EFB500B05895 /* MapViewController.m */,
+				6039927D1C82F01900B05895 /* SearchViewController.h */,
+				6039927E1C82F01900B05895 /* SearchViewController.m */,
+				603992801C82F02D00B05895 /* SanViewController.h */,
+				603992811C82F02D00B05895 /* SanViewController.m */,
+			);
+			name = nav;
 			sourceTree = "<group>";
 		};
 		B7BC51DF1C7DF5740045DE19 /* Category */ = {
@@ -5716,10 +5739,13 @@
 				B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */,
 				D2B311871C7D6DF500347D26 /* ViewController.m in Sources */,
 				B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */,
+				6039927C1C82EFB500B05895 /* MapViewController.m in Sources */,
+				6039927F1C82F01900B05895 /* SearchViewController.m in Sources */,
 				D2B31C2E1C7D74BD00347D26 /* EMTabBarController.m in Sources */,
 				D2B311841C7D6DF500347D26 /* AppDelegate.m in Sources */,
 				603992751C82D3DD00B05895 /* HomeViewController.m in Sources */,
 				D2B311811C7D6DF500347D26 /* main.m in Sources */,
+				603992821C82F02D00B05895 /* SanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
