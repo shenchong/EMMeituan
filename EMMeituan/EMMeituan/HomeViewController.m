@@ -50,9 +50,14 @@
     [navView addSubview:arrowImage];
     
     ///2 地图按钮
+    UIButton * mapBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 42, 28, 42, 30)];
+    [mapBtn setBackgroundImage:[UIImage imageNamed:@"icon_homepage_map_old"] forState:UIControlStateNormal];
+    [mapBtn addTarget:self action:@selector(mapButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [navView addSubview:mapBtn];
     
     ///3 搜索框
     //搜索框
+    
     //搜索图片
     
 }
@@ -63,6 +68,12 @@
 {
     NSLog(@"城市按钮被点击了，主人出去游玩，要换地方啦！");
 }
+
+-(void)mapButtonClick:(UIButton *)mapBtn
+{
+    NSLog(@"主人对这个城市不熟悉，要查一下具体位置啊");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
