@@ -12,7 +12,7 @@
 #import "SanViewController.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
-
+@property (nonatomic,weak)UIImageView *arrowImage;
 @end
 
 @implementation HomeViewController
@@ -49,6 +49,7 @@
     UIImageView * arrowImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_homepage_downArrow"]];
     arrowImage.frame = CGRectMake(CGRectGetMaxX(cityBtn.frame), 38, 13, 10);
     [navView addSubview:arrowImage];
+    self.arrowImage = arrowImage;
     
     ///2 地图按钮
     UIButton * mapBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 42, 28, 42, 30)];
@@ -90,8 +91,10 @@
 -(void)cityButtonClick:(UIButton *)cityBtn
 {
     NSLog(@"城市按钮被点击了，主人出去游玩，要换地方啦！");
-    
-    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.1f];
+    self.arrowImage.transform = CGAffineTransformRotate(self.arrowImage.transform, M_PI);
+    [UIView commitAnimations];
 }
 
 //地图按钮的点击事件
