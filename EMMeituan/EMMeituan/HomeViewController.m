@@ -44,8 +44,10 @@
     [cityBtn addTarget:self action:@selector(cityButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [navView addSubview:cityBtn];
     
-    
     //向下箭头
+    UIImageView * arrowImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_homepage_downArrow"]];
+    arrowImage.frame = CGRectMake(CGRectGetMaxX(cityBtn.frame), 38, 13, 10);
+    [navView addSubview:arrowImage];
     
     ///2 地图按钮
     
