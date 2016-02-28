@@ -11,7 +11,7 @@
 
 #define  TABAR_HEIGHT self.tabBarController.tabBar.frame.size.height
 #define  NAV_HEIGHT self.navigationController.navigationBar.frame.size.height
-#define STATUS 20
+#define STATUS 200
 
 //屏幕宽高
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
