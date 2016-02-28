@@ -10,6 +10,6 @@
 
 @interface HomeViewController : UIViewController
 
-@property (nonatomic,weak) UITableView * tableView;
+@property (nonatomic,strong) UITableView * tableView;
 
 @end

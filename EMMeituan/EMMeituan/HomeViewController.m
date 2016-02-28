@@ -100,11 +100,11 @@
 ///初始化tableView
 -(void)initTableView{
     UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64-49)];
-    [self.view addSubview:self.tableView];
     self.tableView = tableView;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
+    [self.view addSubview:self.tableView];
+
     //刷新
     [self setUpTableView];
 }
@@ -116,9 +116,94 @@
 #warning TODO 后续添加刷新效果
 }
 
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    //1 分类
+    //2 名店抢购
+    //3 美食1元吃吃吃
+    //4 购物商场
+    //5 热门频道
+    //6 猜你喜欢
+    return 6;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 5) {
+#warning TODO 后续修改，可以下拉刷新，获取数据个数
+        return 20;
+    }else if(section == 4){
+        return 2;
+    }else if(section == 3){
+        return 2;
+    }
+    return 1;
+}
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+#warning TODO 后续修改，根据各个单元格的具体情况修改
+    UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    cell.textLabel.text = @"主人，你好！";
+    return cell;
+}
 
+// Variable height support
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 180;
+    }else if(indexPath.section == 1){
+        return 150;
+    }else if(indexPath.section == 2){
+        return 200;
+    }else if(indexPath.section == 3){
+        if (indexPath.row == 0) {
+            return 35;
+        }else{
+            return 130;
+        }
+
+    }else if(indexPath.section == 4){
+        if (indexPath.row == 0) {
+            return 35;
+        }else{
+            return 240;
+        }
+
+    }else if(indexPath.section == 5){
+        if (indexPath.row == 0) {
+            return 35;
+        }else{
+            return 100;
+        }
+    }
+    return 70;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 1;
+    }
+    return 5;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 5;
+}
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView * headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0)];
+    headerView.backgroundColor = My_Color(239, 239, 244);
+    return headerView;
+}
+// custom view for header. will be adjusted to default or specified header height
+- (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView * headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 0)];
+    headerView.backgroundColor = My_Color(239, 239, 244);
+    return headerView;
+}
 
 
 #pragma mark 按钮点击事件
