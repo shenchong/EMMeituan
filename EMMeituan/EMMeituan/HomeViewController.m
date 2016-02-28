@@ -33,10 +33,17 @@
 {
     ///创建导航栏
     UIView * navView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
+#warning TODO //修改nav颜色
     navView.backgroundColor = [UIColor redColor];
     [self.view addSubview:navView];
     ///1 选择城市
     //城市
+    UIButton * cityBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 30, 40, 25)];
+    cityBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [cityBtn setTitle:@"北京" forState:UIControlStateNormal];
+    [cityBtn addTarget:self action:@selector(cityButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [navView addSubview:cityBtn];
+    
     
     //向下箭头
     
@@ -48,6 +55,12 @@
     
 }
 
+#pragma mark 按钮点击事件
+// 城市按钮的点击事件
+-(void)cityButtonClick:(UIButton *)cityBtn
+{
+    NSLog(@"城市按钮被点击了，主人出去游玩，要换地方啦！");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
