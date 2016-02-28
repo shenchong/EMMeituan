@@ -12,7 +12,15 @@
 #import "SanViewController.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
+///导航栏向下的箭头
 @property (nonatomic,weak)UIImageView *arrowImage;
+
+///点击城市按钮出现的遮盖
+@property (nonatomic,weak)UIView * coverView;
+///选择城市的大空间
+@property (nonatomic,weak)UIButton * selectCityBtn;
+
+
 @end
 
 @implementation HomeViewController
@@ -95,6 +103,30 @@
     [UIView setAnimationDuration:0.1f];
     self.arrowImage.transform = CGAffineTransformRotate(self.arrowImage.transform, M_PI);
     [UIView commitAnimations];
+    
+    
+    UIWindow * mainWindow = [UIApplication sharedApplication].keyWindow;
+    ///1 创建一个遮盖的UIView
+    UIView * coverView = [[UIView alloc] initWithFrame:mainWindow.bounds];
+    coverView.backgroundColor = [UIColor blackColor];
+    coverView.alpha = 0.3;
+    [mainWindow addSubview:coverView];
+    self.coverView = coverView;
+
+    
+    
+    ///2 再创建一个UIButton用来做城市的旋转,给这个Button添加点击事件，点击关闭
+#warning TODO 高度需要改的
+    CGFloat selectCityBtnH = 300;
+    UIButton * selectCityBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 64, mainWindow.bounds.size.width, selectCityBtnH)];
+    [selectCityBtn setBackgroundColor:[UIColor whiteColor]];
+    [selectCityBtn setTitle:@"主人在这里更改城市选择" forState:UIControlStateNormal];
+    [selectCityBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [selectCityBtn addTarget:self action:@selector(selectCityButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    // 不能把selectCityBtn添加到coverView里面, 因为coveView的半透明的, 这样的化, 它的子控件也会半透明
+    [mainWindow addSubview:selectCityBtn];
+    self.selectCityBtn = selectCityBtn;
+    
 }
 
 //地图按钮的点击事件
@@ -121,6 +153,24 @@
     SanViewController * sanVC = [[SanViewController alloc] init];
     [self.navigationController pushViewController:sanVC animated:YES];
     
+}
+
+//选择城市的点击事件
+-(void)selectCityButtonClick:(UIButton *)button
+{
+    NSLog(@"选择城市");
+    ///button隐藏，遮盖删除
+    [self removeCoverViewAndSelectCityButton];
+}
+
+//移除遮盖，城市选择button
+-(void)removeCoverViewAndSelectCityButton
+{
+    //1 移除城市选择button
+    [self.selectCityBtn removeFromSuperview];
+    //2 移除遮盖
+    [self.coverView removeFromSuperview];
+
 }
 
 
