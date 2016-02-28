@@ -56,7 +56,7 @@
     
     ///3 搜索框
     //搜索框
-    UIButton * searchView = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(cityBtn.frame)+21, 28, CGRectGetMinX(mapBtn.frame)-21-CGRectGetMaxX(cityBtn.frame), 30)];
+    UIButton * searchView = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(cityBtn.frame)+21, 28, CGRectGetMinX(mapBtn.frame)-21-CGRectGetMaxX(cityBtn.frame)-36, 30)];
     searchView.backgroundColor = [UIColor whiteColor];
     searchView.layer.masksToBounds = YES;
     searchView.layer.cornerRadius = 14;
@@ -75,7 +75,12 @@
     placeHolerLabel.textColor = [UIColor grayColor];
     [searchView addSubview:placeHolerLabel];
     
-    
+    ///4 扫一扫
+    CGFloat sanBtnWH = 24;
+    UIButton * sanBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 42 - sanBtnWH , 32, sanBtnWH, sanBtnWH)];
+    [sanBtn setBackgroundImage:[UIImage imageNamed:@"icon_homepage_scan"] forState:UIControlStateNormal];
+    [sanBtn addTarget:self action:@selector(sanButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [navView addSubview:sanBtn];
 }
 
 #pragma mark 按钮点击事件
@@ -85,15 +90,24 @@
     NSLog(@"城市按钮被点击了，主人出去游玩，要换地方啦！");
 }
 
+//地图按钮的点击事件
 -(void)mapButtonClick:(UIButton *)mapBtn
 {
     NSLog(@"主人对这个城市不熟悉，要查一下具体位置啊");
 }
 
+//搜索框按钮的点击事件
 -(void)searchViewButtonClick:(UIButton *)searchView
 {
     NSLog(@"主人想要搜索，热门服务快点过来啊！");
 }
+
+//扫一扫按钮的点击事件
+-(void)sanButtonClick:(UIButton *)sanBtn
+{
+    NSLog(@"主人想要扫一扫哦，可能要付费咯！");
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
