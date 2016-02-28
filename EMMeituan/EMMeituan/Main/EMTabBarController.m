@@ -9,6 +9,8 @@
 #import "EMTabBarController.h"
 #import "EMTabBar.h"
 
+#import "HomeViewController.h"
+
 @interface EMTabBarController ()
 
 @end
@@ -37,7 +39,7 @@
     self.tabBar.backgroundImage = [[UIImage imageNamed:@"bg_tabbar"] stretchableImageWithLeftCapWidth:25 topCapHeight:25];
 //    self.tabBar.selectionIndicatorImage = [[UIImage imageNamed:@"bg_tabbar"] stretchableImageWithLeftCapWidth:25 topCapHeight:25];
     
-    UIViewController *homeVC = [[UIViewController alloc]init];
+    HomeViewController *homeVC = [[HomeViewController alloc]init];
     [self addChildViewControllerWithTitle:@"首页" Image:@"icon_tabbar_homepage" Controller:homeVC];
     
     UIViewController *worthVC = [[UIViewController alloc]init];
@@ -55,7 +57,7 @@
 
 - (void)addChildViewControllerWithTitle:(NSString *)title Image:(NSString *)image Controller:(UIViewController *)controller{
     
-    controller.view.backgroundColor = [UIColor whiteColor];
+//    controller.view.backgroundColor = [UIColor whiteColor];
     controller.tabBarItem.image = [UIImage imageNamed:image];
     controller.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",image]]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     controller.title = title;

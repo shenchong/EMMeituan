@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		603992751C82D3DD00B05895 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603992741C82D3DD00B05895 /* HomeViewController.m */; };
 		B7BC51DB1C7DF3F50045DE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */; };
 		B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51DD1C7DF4C90045DE19 /* EMTabBar.m */; };
 		B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51E11C7DF59A0045DE19 /* UIView+extension.m */; };
@@ -1378,6 +1379,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		603992731C82D3DD00B05895 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		603992741C82D3DD00B05895 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		B70612721C7F4F48005D2A65 /* emMeituanHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanHeader.h; sourceTree = "<group>"; };
 		B70612731C7F4F57005D2A65 /* emMeituanPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanPrefixHeader.pch; sourceTree = "<group>"; };
 		B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -2769,6 +2772,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6039926E1C82D19D00B05895 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				603992711C82D1D400B05895 /* Model */,
+				603992701C82D1C800B05895 /* Views */,
+				6039926F1C82D1B700B05895 /* Controller */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		6039926F1C82D1B700B05895 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				603992731C82D3DD00B05895 /* HomeViewController.h */,
+				603992741C82D3DD00B05895 /* HomeViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		603992701C82D1C800B05895 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		603992711C82D1D400B05895 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B7BC51DF1C7DF5740045DE19 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -2803,6 +2839,7 @@
 			children = (
 				B7BC51DF1C7DF5740045DE19 /* Category */,
 				D2B31C2B1C7D747400347D26 /* Main */,
+				6039926E1C82D19D00B05895 /* Home */,
 				D2B311821C7D6DF500347D26 /* AppDelegate.h */,
 				D2B311831C7D6DF500347D26 /* AppDelegate.m */,
 				D2B311851C7D6DF500347D26 /* ViewController.h */,
@@ -5681,6 +5718,7 @@
 				B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */,
 				D2B31C2E1C7D74BD00347D26 /* EMTabBarController.m in Sources */,
 				D2B311841C7D6DF500347D26 /* AppDelegate.m in Sources */,
+				603992751C82D3DD00B05895 /* HomeViewController.m in Sources */,
 				D2B311811C7D6DF500347D26 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
