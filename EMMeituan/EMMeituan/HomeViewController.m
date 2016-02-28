@@ -35,6 +35,9 @@
     //设置导航栏
     [self setNav];
     
+    //初始化tableView
+    [self initTableView];
+    
     
 }
 
@@ -94,6 +97,30 @@
     [navView addSubview:sanBtn];
 }
 
+///初始化tableView
+-(void)initTableView{
+    UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64-49)];
+    [self.view addSubview:self.tableView];
+    self.tableView = tableView;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    //刷新
+    [self setUpTableView];
+}
+
+//tableView刷新
+-(void)setUpTableView
+{
+    NSLog(@"tableView刷新");
+#warning TODO 后续添加刷新效果
+}
+
+
+
+
+
+
 #pragma mark 按钮点击事件
 // 城市按钮的点击事件
 -(void)cityButtonClick:(UIButton *)cityBtn
@@ -112,7 +139,8 @@
     coverView.alpha = 0.3;
     [mainWindow addSubview:coverView];
     self.coverView = coverView;
-
+    UITapGestureRecognizer *coverViewTouch=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(removeCoverViewAndSelectCityButton)];
+    [self.coverView addGestureRecognizer:coverViewTouch];
     
     
     ///2 再创建一个UIButton用来做城市的旋转,给这个Button添加点击事件，点击关闭
