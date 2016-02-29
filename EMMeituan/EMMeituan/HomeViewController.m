@@ -10,6 +10,8 @@
 #import "MapViewController.h"
 #import "SearchViewController.h"
 #import "SanViewController.h"
+#import "EMLoves.h"
+#import "EMLovesCell.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 ///导航栏向下的箭头
@@ -19,6 +21,9 @@
 @property (nonatomic,weak)UIView * coverView;
 ///选择城市的大空间
 @property (nonatomic,weak)UIButton * selectCityBtn;
+
+///猜你喜欢的数据
+@property (nonatomic,strong)NSArray * loves;
 
 
 @end
@@ -37,6 +42,8 @@
     
     //初始化tableView
     [self initTableView];
+    
+    NSLog(@"%@",self.loves);
     
     
 }
@@ -119,19 +126,19 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    //1 分类
+    //1 分类Class
     //2 名店抢购
     //3 美食1元吃吃吃
     //4 购物商场
     //5 热门频道
-    //6 猜你喜欢
+    //6 猜你喜欢Love
     return 6;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 5) {
-#warning TODO 后续修改，可以下拉刷新，获取数据个数
-        return 20;
+        return self.loves.count + 1;
+//        return 1;
     }else if(section == 4){
         return 2;
     }else if(section == 3){
@@ -142,6 +149,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 5) {
+        if (indexPath.row == 0 ) {
+            UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+            cell.textLabel.text = @"猜你喜欢";
+            return cell;
+        }else if (indexPath.row != 0){
+            //1 获取模型数据
+            EMLoves * models = self.loves[indexPath.row-1];
+            //2 创建单元格
+            EMLovesCell * cell = [EMLovesCell lovesCellWithTableView:tableView ];
+            
+            //3 把模型数据赋值给单元格
+            cell.Loves = models;
+            
+            //4 返回单元格
+            return cell;
+        }
+    }
 #warning TODO 后续修改，根据各个单元格的具体情况修改
     UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     cell.textLabel.text = @"主人，你好！";
@@ -285,6 +310,24 @@
     [self.coverView removeFromSuperview];
 
 }
+
+#pragma mark - 懒加载数据
+-(NSArray *)loves
+{
+    if (_loves == nil) {
+        NSString * path = [[NSBundle mainBundle] pathForResource:@"loves.plist" ofType:nil];
+        NSArray * arrayDicts = [NSArray arrayWithContentsOfFile:path];
+        
+        NSMutableArray * arrayM = [NSMutableArray array];
+        for (NSDictionary * dict in arrayDicts) {
+            EMLoves * Model = [EMLoves lovesWithDict:dict];
+            [arrayM addObject:Model];
+        }
+        _loves = arrayM;
+    }
+    return _loves;
+}
+
 
 
 - (void)didReceiveMemoryWarning {
