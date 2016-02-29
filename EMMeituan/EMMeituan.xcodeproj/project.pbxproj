@@ -24,6 +24,7 @@
 		6076DFB31C84825500545983 /* 热门.png in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFB21C84825500545983 /* 热门.png */; };
 		6076DFB51C84829300545983 /* 猜你.png in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFB41C84829300545983 /* 猜你.png */; };
 		6076DFB71C84832800545983 /* 购物.png in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFB61C84832800545983 /* 购物.png */; };
+		6076DFBB1C84878900545983 /* 美食.png in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFBA1C84878900545983 /* 美食.png */; };
 		B7BC51DB1C7DF3F50045DE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */; };
 		B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51DD1C7DF4C90045DE19 /* EMTabBar.m */; };
 		B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51E11C7DF59A0045DE19 /* UIView+extension.m */; };
@@ -1421,6 +1422,7 @@
 		6076DFB21C84825500545983 /* 热门.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "热门.png"; sourceTree = "<group>"; };
 		6076DFB41C84829300545983 /* 猜你.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "猜你.png"; sourceTree = "<group>"; };
 		6076DFB61C84832800545983 /* 购物.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "购物.png"; sourceTree = "<group>"; };
+		6076DFBA1C84878900545983 /* 美食.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "美食.png"; sourceTree = "<group>"; };
 		B70612721C7F4F48005D2A65 /* emMeituanHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanHeader.h; sourceTree = "<group>"; };
 		B70612731C7F4F57005D2A65 /* emMeituanPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanPrefixHeader.pch; sourceTree = "<group>"; };
 		B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -2827,6 +2829,7 @@
 			children = (
 				6076DFB61C84832800545983 /* 购物.png */,
 				6076DFB41C84829300545983 /* 猜你.png */,
+				6076DFBA1C84878900545983 /* 美食.png */,
 				6076DFB21C84825500545983 /* 热门.png */,
 				6076DF881C846C5800545983 /* HomeViewController.h */,
 				6076DF891C846C5800545983 /* HomeViewController.m */,
@@ -4952,6 +4955,7 @@
 				D2B31A7E1C7D732300347D26 /* icon_mine_myCoupon_count.png in Resources */,
 				D2B3193B1C7D732300347D26 /* icon_collect_empty.png in Resources */,
 				D2B319471C7D732300347D26 /* icon_deal_ guarantee@2x.png in Resources */,
+				6076DFBB1C84878900545983 /* 美食.png in Resources */,
 				D2B319131C7D732300347D26 /* icon_cate_normal_2.png in Resources */,
 				D2B317501C7D732200347D26 /* bg_dropdown_left_selected@2x.png in Resources */,
 				D2B3183B1C7D732200347D26 /* btn_captcha@2x.png in Resources */,

@@ -139,9 +139,7 @@
     if (section == 5) {
         return self.loves.count + 1;
 //        return 1;
-    }else if(section == 4){
-        return 2;
-    }else if(section == 3){
+    }else if(section == 4 ||section == 3 ||section == 2){
         return 2;
     }
     return 1;
@@ -209,6 +207,32 @@
             return cell;
         }
     }
+    if (indexPath.section == 2) {
+        if (indexPath.row == 0 ) {
+            UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+            cell.textLabel.text = @"美食1元吃吃吃";
+            cell.textLabel.font = [UIFont systemFontOfSize:22];
+            cell.textLabel.textColor = [UIColor orangeColor];
+            cell.detailTextLabel.text = @"新用户专享  海量美味";
+            cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
+            cell.detailTextLabel.textColor = [UIColor grayColor];
+            cell.imageView.image = [UIImage imageNamed:@"美食"];
+            
+            return cell;
+        }else if (indexPath.row != 0){
+            //1 获取模型数据
+            EMLoves * models = self.loves[0];
+            //2 创建单元格
+            EMLovesCell * cell = [EMLovesCell lovesCellWithTableView:tableView ];
+            
+            //3 把模型数据赋值给单元格
+            cell.Loves = models;
+            
+            //4 返回单元格
+            return cell;
+        }
+    }
+
 
 
 #warning TODO 后续修改，根据各个单元格的具体情况修改
@@ -226,7 +250,10 @@
     }else if(indexPath.section == 1){
         return 150;
     }else if(indexPath.section == 2){
-        return 200;
+        if (indexPath.row == 0) {
+            return 70;
+        }
+        return 140;
     }else if(indexPath.section == 3){
         if (indexPath.row == 0) {
             return 35;
