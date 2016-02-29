@@ -12,6 +12,9 @@
 #import "SanViewController.h"
 #import "EMLoves.h"
 #import "EMLovesCell.h"
+#import "EMFoodCell.h"
+#import "EMSmallFoods.h"
+#import "EMSmallFoodView.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 ///导航栏向下的箭头
@@ -24,6 +27,9 @@
 
 ///猜你喜欢的数据
 @property (nonatomic,strong)NSArray * loves;
+
+///美食数据
+@property (nonatomic,strong)NSArray * foods;
 
 
 @end
@@ -43,8 +49,8 @@
     //初始化tableView
     [self initTableView];
     
-    NSLog(@"%@",self.loves);
-    
+    NSLog(@"猜你喜欢的数据%@",self.loves);
+    NSLog(@"美食数据%@",self.foods);
     
 }
 
@@ -211,23 +217,24 @@
         if (indexPath.row == 0 ) {
             UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
             cell.textLabel.text = @"美食1元吃吃吃";
-            cell.textLabel.font = [UIFont systemFontOfSize:22];
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:23];
             cell.textLabel.textColor = [UIColor orangeColor];
             cell.detailTextLabel.text = @"新用户专享  海量美味";
-            cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
+            cell.detailTextLabel.font = [UIFont systemFontOfSize:16];
             cell.detailTextLabel.textColor = [UIColor grayColor];
             cell.imageView.image = [UIImage imageNamed:@"美食"];
             
             return cell;
         }else if (indexPath.row != 0){
-            //1 获取模型数据
-            EMLoves * models = self.loves[0];
-            //2 创建单元格
-            EMLovesCell * cell = [EMLovesCell lovesCellWithTableView:tableView ];
-            
-            //3 把模型数据赋值给单元格
-            cell.Loves = models;
-            
+
+            static NSString * ID = @"Foods_cell";
+            EMFoodCell * cell = [tableView dequeueReusableCellWithIdentifier:ID];
+            if (cell == nil) {
+                //通过Xib来加载cell
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"EMFoodCell" owner:nil options:nil] firstObject];
+                //设置美食数据
+                [self setFoodData:cell];
+            }
             //4 返回单元格
             return cell;
         }
@@ -382,6 +389,28 @@
 
 }
 
+#pragma mark - 提取出的方法
+-(void)setFoodData:(EMFoodCell *)cell
+{
+    for (int i = 0; i < self.foods.count; i++) {
+        //1 创建一个已经设置完数据的格子
+        EMSmallFoodView * smallFV = [EMSmallFoodView smallFoodViewWithsmallFood:self.foods[i]];
+        //2 添加到父控件
+        [cell addSubview:smallFV];
+        //3 计算和设计frame
+        CGFloat smallFVH = 70;
+        CGFloat smallFVW = self.view.frame.size.width * 0.5;
+        //一行放2个格子
+        //行号
+        int row = i / 2;
+        //列号
+        int col = i % 2;
+        CGFloat smallX =smallFVW * col;
+        CGFloat smallY =smallFVH * row;
+        smallFV.frame = CGRectMake(smallX, smallY, smallFVW, smallFVH);
+    }
+}
+
 #pragma mark - 懒加载数据
 -(NSArray *)loves
 {
@@ -399,6 +428,21 @@
     return _loves;
 }
 
+-(NSArray *)foods
+{
+    if (_foods == nil) {
+        NSString * path = [[NSBundle mainBundle] pathForResource:@"foods.plist" ofType:nil];
+        NSArray * arrayDicts = [NSArray arrayWithContentsOfFile:path];
+        
+        NSMutableArray * arrayM = [NSMutableArray array];
+        for (NSDictionary * dict in arrayDicts) {
+            EMSmallFoods * Model = [EMSmallFoods smallFoodWithDict:dict];
+            [arrayM addObject:Model];
+        }
+        _foods = arrayM;
+    }
+    return _foods;
+}
 
 
 - (void)didReceiveMemoryWarning {

@@ -25,6 +25,12 @@
 		6076DFB51C84829300545983 /* 猜你.png in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFB41C84829300545983 /* 猜你.png */; };
 		6076DFB71C84832800545983 /* 购物.png in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFB61C84832800545983 /* 购物.png */; };
 		6076DFBB1C84878900545983 /* 美食.png in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFBA1C84878900545983 /* 美食.png */; };
+		6076DFC11C848BB200545983 /* EMFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6076DFBF1C848BB200545983 /* EMFoodCell.m */; };
+		6076DFC21C848BB200545983 /* EMFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFC01C848BB200545983 /* EMFoodCell.xib */; };
+		6076DFC81C848E5A00545983 /* EMSmallFoodView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6076DFC71C848E5A00545983 /* EMSmallFoodView.m */; };
+		6076DFD01C848FE000545983 /* EMSmallFoodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFCF1C848FE000545983 /* EMSmallFoodView.xib */; };
+		6076DFD31C8490CE00545983 /* EMSmallFoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 6076DFD21C8490CE00545983 /* EMSmallFoods.m */; };
+		6076DFD51C8497E200545983 /* foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFD41C8497E200545983 /* foods.plist */; };
 		B7BC51DB1C7DF3F50045DE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */; };
 		B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51DD1C7DF4C90045DE19 /* EMTabBar.m */; };
 		B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51E11C7DF59A0045DE19 /* UIView+extension.m */; };
@@ -1423,6 +1429,15 @@
 		6076DFB41C84829300545983 /* 猜你.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "猜你.png"; sourceTree = "<group>"; };
 		6076DFB61C84832800545983 /* 购物.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "购物.png"; sourceTree = "<group>"; };
 		6076DFBA1C84878900545983 /* 美食.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "美食.png"; sourceTree = "<group>"; };
+		6076DFBE1C848BB200545983 /* EMFoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFoodCell.h; sourceTree = "<group>"; };
+		6076DFBF1C848BB200545983 /* EMFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMFoodCell.m; sourceTree = "<group>"; };
+		6076DFC01C848BB200545983 /* EMFoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMFoodCell.xib; sourceTree = "<group>"; };
+		6076DFC61C848E5A00545983 /* EMSmallFoodView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSmallFoodView.h; sourceTree = "<group>"; };
+		6076DFC71C848E5A00545983 /* EMSmallFoodView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSmallFoodView.m; sourceTree = "<group>"; };
+		6076DFCF1C848FE000545983 /* EMSmallFoodView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMSmallFoodView.xib; sourceTree = "<group>"; };
+		6076DFD11C8490CE00545983 /* EMSmallFoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSmallFoods.h; sourceTree = "<group>"; };
+		6076DFD21C8490CE00545983 /* EMSmallFoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSmallFoods.m; sourceTree = "<group>"; };
+		6076DFD41C8497E200545983 /* foods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foods.plist; sourceTree = "<group>"; };
 		B70612721C7F4F48005D2A65 /* emMeituanHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanHeader.h; sourceTree = "<group>"; };
 		B70612731C7F4F57005D2A65 /* emMeituanPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanPrefixHeader.pch; sourceTree = "<group>"; };
 		B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -2854,6 +2869,7 @@
 		6076DF841C846C1200545983 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6076DFBC1C848B6200545983 /* FoodModel */,
 				6076DFA51C84719900545983 /* HotModel */,
 				6076DF851C846C1200545983 /* LoveModel */,
 			);
@@ -2872,6 +2888,7 @@
 		6076DF861C846C1200545983 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6076DFBD1C848B7A00545983 /* FoodView */,
 				6076DFA41C84717D00545983 /* HotView */,
 				6076DF971C846CC300545983 /* LoveView */,
 				6076DF871C846C1200545983 /* ClassView */,
@@ -2918,6 +2935,29 @@
 				6076DFAC1C8471F600545983 /* EMHots.m */,
 			);
 			path = HotModel;
+			sourceTree = "<group>";
+		};
+		6076DFBC1C848B6200545983 /* FoodModel */ = {
+			isa = PBXGroup;
+			children = (
+				6076DFD11C8490CE00545983 /* EMSmallFoods.h */,
+				6076DFD21C8490CE00545983 /* EMSmallFoods.m */,
+			);
+			path = FoodModel;
+			sourceTree = "<group>";
+		};
+		6076DFBD1C848B7A00545983 /* FoodView */ = {
+			isa = PBXGroup;
+			children = (
+				6076DFD41C8497E200545983 /* foods.plist */,
+				6076DFBE1C848BB200545983 /* EMFoodCell.h */,
+				6076DFBF1C848BB200545983 /* EMFoodCell.m */,
+				6076DFC01C848BB200545983 /* EMFoodCell.xib */,
+				6076DFC61C848E5A00545983 /* EMSmallFoodView.h */,
+				6076DFC71C848E5A00545983 /* EMSmallFoodView.m */,
+				6076DFCF1C848FE000545983 /* EMSmallFoodView.xib */,
+			);
+			path = FoodView;
 			sourceTree = "<group>";
 		};
 		B7BC51DF1C7DF5740045DE19 /* Category */ = {
@@ -4809,6 +4849,7 @@
 				D2B319671C7D732300347D26 /* icon_deal_package.png in Resources */,
 				D2B3182A1C7D732200347D26 /* btn_banklist_filter_right_normal@2x.png in Resources */,
 				D2B319001C7D732300347D26 /* icon_camera_finish_disabled@2x.png in Resources */,
+				6076DFD01C848FE000545983 /* EMSmallFoodView.xib in Resources */,
 				D2B318AA1C7D732300347D26 /* cell_single_selected@2x.png in Resources */,
 				D2B318231C7D732200347D26 /* btn_add_dish@3x.png in Resources */,
 				D2B31AC71C7D732300347D26 /* icon_ordercenter_redcircle@2x.png in Resources */,
@@ -5445,6 +5486,7 @@
 				D2B31BB31C7D732300347D26 /* img_member_privilege_ios6@3x.png in Resources */,
 				D2B31BAF1C7D732300347D26 /* img_dotted_line@2x.png in Resources */,
 				D2B31B651C7D732300347D26 /* icon_shoppingmall_tag@2x.png in Resources */,
+				6076DFD51C8497E200545983 /* foods.plist in Resources */,
 				D2B3180A1C7D732200347D26 /* bg_userreview_circle@2x.png in Resources */,
 				D2B317071C7D732200347D26 /* AppIcon60x60@3x.png in Resources */,
 				D2B318921C7D732300347D26 /* btn_start_up_close.png in Resources */,
@@ -5722,6 +5764,7 @@
 				D2B3190E1C7D732300347D26 /* icon_camera_switch@2x.png in Resources */,
 				D2B31C081C7D732300347D26 /* share_logo_qq.png in Resources */,
 				D2B31BB01C7D732300347D26 /* img_feedCell_default@2x.png in Resources */,
+				6076DFC21C848BB200545983 /* EMFoodCell.xib in Resources */,
 				D2B319F41C7D732300347D26 /* icon_level_3@2x.png in Resources */,
 				D2B31A2C1C7D732300347D26 /* icon_merchant_collect_selected@2x.png in Resources */,
 				D2B31B7B1C7D732300347D26 /* icon_tabbar_homepage.png in Resources */,
@@ -5838,13 +5881,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */,
+				6076DFC11C848BB200545983 /* EMFoodCell.m in Sources */,
 				6076DFA91C8471D000545983 /* EMHotsCell.m in Sources */,
 				6076DF961C846C9F00545983 /* EMLoves.m in Sources */,
 				D2B311871C7D6DF500347D26 /* ViewController.m in Sources */,
+				6076DFD31C8490CE00545983 /* EMSmallFoods.m in Sources */,
 				6076DF9B1C846CD400545983 /* EMLovesCell.m in Sources */,
 				B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */,
 				6076DF931C846C6A00545983 /* SearchViewController.m in Sources */,
 				6076DF8A1C846C5900545983 /* HomeViewController.m in Sources */,
+				6076DFC81C848E5A00545983 /* EMSmallFoodView.m in Sources */,
 				D2B31C2E1C7D74BD00347D26 /* EMTabBarController.m in Sources */,
 				D2B311841C7D6DF500347D26 /* AppDelegate.m in Sources */,
 				6076DFA31C846D0A00545983 /* ClassView.m in Sources */,
