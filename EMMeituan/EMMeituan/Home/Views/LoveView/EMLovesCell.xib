@@ -110,7 +110,7 @@
                 <outlet property="sellLabel" destination="IMU-7S-Mrl" id="mPr-4g-0Wi"/>
                 <outlet property="titleLabel" destination="j9v-pb-pQL" id="mSm-cT-YVo"/>
             </connections>
-            <point key="canvasLocation" x="314" y="161"/>
+            <point key="canvasLocation" x="294" y="154"/>
         </tableViewCell>
     </objects>
     <resources>

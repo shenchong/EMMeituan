@@ -9,14 +9,14 @@
 #import "EMLovesCell.h"
 @interface EMLovesCell ()
 
-//@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
-//@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-//@property (weak, nonatomic) IBOutlet UILabel *descLabel;
-//
-//@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
-//@property (weak, nonatomic) IBOutlet UITextField *cheapText;
-//@property (weak, nonatomic) IBOutlet UILabel *sellLabel;
-//@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UITextField *cheapText;
+@property (weak, nonatomic) IBOutlet UILabel *sellLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
 @end
 @implementation EMLovesCell
