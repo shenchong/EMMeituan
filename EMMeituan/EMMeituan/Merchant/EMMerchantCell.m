@@ -41,11 +41,19 @@
         [self.contentView addSubview:merchantNameLabel];
         
         //星星
-        for (int i = 0; i < 5; ++i) {
-            UIImageView *starImg = [[UIImageView alloc]initWithFrame:CGRectMake(110+i*14, 43, 12, 12)];
-            self.starImg = starImg;
+//        for (int i = 0; i < 5; ++i) {
+//            UIImageView *starImg = [[UIImageView alloc]initWithFrame:CGRectMake(110+i*14, 43, 12, 12)];
+//            self.starImg = starImg;
+//            [self.contentView addSubview:starImg];
+//            [_starImg setImage:[UIImage imageNamed:@"icon_feedCell_star_full"]];
+//        }
+        
+        //星星
+        for (int i = 0; i < 5; i++) {
+            UIImageView *starImg = [[UIImageView alloc] initWithFrame:CGRectMake(110+i*14, 43, 12, 12)];
+            starImg.tag = 30+i;
+            [starImg setImage:[UIImage imageNamed:@"icon_feedCell_star_empty"]];
             [self.contentView addSubview:starImg];
-            [_starImg setImage:[UIImage imageNamed:@"icon_feedCell_star_full"]];
         }
         
         //评价数
@@ -63,7 +71,7 @@
         [self.contentView addSubview:addressLabel];
         
         //下划线
-        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 91.5, SCREEN_WIDTH, 0.5)];
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 89.5, SCREEN_WIDTH, 0.5)];
         lineView.backgroundColor = My_Color(192, 192, 192);
         [self.contentView addSubview:lineView];
     }
@@ -74,17 +82,29 @@
     _merchantModel = merchantModel;
     
     NSString *imgUrl = [merchantModel.frontImg stringByReplacingOccurrencesOfString:@"w.h" withString:@"160.0"];
-    _merchantImage.image = [UIImage imageNamed:@"bg_customReview_image_default"];
+//    _merchantImage.image = [UIImage imageNamed:@"bg_customReview_image_default"];
+    [_merchantImage sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:[UIImage imageNamed:@"bg_customReview_image_default"]];
     
-    _merchantNameLabel.text = @"环信(数码大厦)";
+//    _merchantNameLabel.text = @"环信(数码大厦)";
+    _merchantNameLabel.text = merchantModel.name;
+
+    // 设置小星星
+    double scoreD = [merchantModel.avgScore doubleValue];
+    int scoreI = ceil(scoreD);
+    for (int i = 0; i < 5; i++) {
+        UIImageView *imageview = (UIImageView *)[self.contentView viewWithTag:30+i];
+        [imageview setImage:[UIImage imageNamed:@"icon_feedCell_star_empty"]];
+    }
+    for (int i = 0; i < scoreI; i++) {
+        UIImageView *imageview = (UIImageView *)[self.contentView viewWithTag:30+i];
+        [imageview setImage:[UIImage imageNamed:@"icon_feedCell_star_full"]];
+    }
     
-//    for (int i = 0; i < 5; i++) {
-//        [_starImg setImage:[UIImage imageNamed:@"icon_feedCell_star_full"]];
-//    }
+//    _evaluateLabel.text = @"999评价";
+    _evaluateLabel.text = [NSString stringWithFormat:@"%@评价",merchantModel.markNumbers];
     
-    _evaluateLabel.text = @"999评价";
-    
-    _addressLabel.text = @"即时通讯云 数码大厦";
+//    _addressLabel.text = @"即时通讯云 数码大厦";
+    _addressLabel.text = [NSString stringWithFormat:@"%@  %@",merchantModel.cateName,merchantModel.areaName];
     
     
 }
