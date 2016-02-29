@@ -69,13 +69,13 @@
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     flowLayout.headerReferenceSize = CGSizeMake(0, -62);
     [flowLayout setItemSize:CGSizeMake(SCREEN_WIDTH/2-6, 200*(SCREEN_HEIGHT/1000.0))];
-    _downCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, SCREEN_HEIGHT-STATUS-NAV_HEIGHT-TABAR_HEIGHT) collectionViewLayout:flowLayout];
+    _downCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, SCREEN_HEIGHT-STATUS-NAV_HEIGHT-TABAR_HEIGHT-62) collectionViewLayout:flowLayout];
     _downCollectionView.backgroundColor = kUIColorFromRGB(0xe0e3ea, 1);
 //    _downCollectionView.bounces = YES;
     _downCollectionView.delegate = self;
     _downCollectionView.dataSource = self;
     //注册Cell，必须要有
-    [_downCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"CollectionViewCell"];
+    [_downCollectionView registerClass:[homeServiceCollectionViewCell class] forCellWithReuseIdentifier:@"CollectionViewCell"];
     [self.view addSubview:_downCollectionView];
 }
 
@@ -87,6 +87,9 @@
     }
     homeServiceModel *model = homeServiceArray[indexPath.row];
     cell.backgroundColor = [self stringTOColor:model.background];
+    
+    cell.cellBackgroundLabel.text = model.cateName;
+
     
     return cell;
 }

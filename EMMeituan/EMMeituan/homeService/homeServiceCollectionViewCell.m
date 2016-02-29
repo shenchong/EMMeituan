@@ -26,10 +26,6 @@
 - (homeServiceCollectionViewCell *)initWithModel:(homeServiceModel *)model {
     
     homeServiceCollectionViewCell *cell = [[homeServiceCollectionViewCell alloc]init];
-    self.backgroundColor = [self stringTOColor:model.background];
-    self.cellBackgroundImageView.image = [UIImage imageNamed:@"aa"];
-    self.cellBackgroundLabel.text = @"aa";
-    
     return cell;
 }
 
