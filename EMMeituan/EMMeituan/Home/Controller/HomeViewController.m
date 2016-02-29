@@ -130,7 +130,7 @@
     //2 名店抢购
     //3 美食1元吃吃吃
     //4 购物商场
-    //5 热门频道
+    //5 热门频道hot
     //6 猜你喜欢Love
     return 6;
 }
@@ -151,8 +151,9 @@
 {
     if (indexPath.section == 5) {
         if (indexPath.row == 0 ) {
-            UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+            UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
             cell.textLabel.text = @"猜你喜欢";
+            cell.imageView.image = [UIImage imageNamed:@"猜你"];
             return cell;
         }else if (indexPath.row != 0){
             //1 获取模型数据
@@ -167,6 +168,49 @@
             return cell;
         }
     }
+    
+    if (indexPath.section == 4) {
+        if (indexPath.row == 0 ) {
+            UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+            cell.textLabel.text = @"热门频道";
+            cell.imageView.image = [UIImage imageNamed:@"热门"];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            return cell;
+        }else if (indexPath.row != 0){
+            //1 获取模型数据
+            EMLoves * models = self.loves[0];
+            //2 创建单元格
+            EMLovesCell * cell = [EMLovesCell lovesCellWithTableView:tableView ];
+            
+            //3 把模型数据赋值给单元格
+            cell.Loves = models;
+            
+            //4 返回单元格
+            return cell;
+        }
+    }
+    if (indexPath.section == 3) {
+        if (indexPath.row == 0 ) {
+            UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+            cell.textLabel.text = @"购物商场";
+            cell.imageView.image = [UIImage imageNamed:@"购物"];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            return cell;
+        }else if (indexPath.row != 0){
+            //1 获取模型数据
+            EMLoves * models = self.loves[0];
+            //2 创建单元格
+            EMLovesCell * cell = [EMLovesCell lovesCellWithTableView:tableView ];
+            
+            //3 把模型数据赋值给单元格
+            cell.Loves = models;
+            
+            //4 返回单元格
+            return cell;
+        }
+    }
+
+
 #warning TODO 后续修改，根据各个单元格的具体情况修改
     UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     cell.textLabel.text = @"主人，你好！";
@@ -194,7 +238,7 @@
         if (indexPath.row == 0) {
             return 35;
         }else{
-            return 240;
+            return 248;
         }
 
     }else if(indexPath.section == 5){
