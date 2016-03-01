@@ -1,13 +1,13 @@
 //
-//  MapViewController.h
+//  EMShopCell.h
 //  EMMeituan
 //
-//  Created by mazhi'hua on 16/2/28.
+//  Created by mazhi'hua on 16/3/1.
 //  Copyright © 2016年 easemob. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface MapViewController : UIViewController
+@interface EMShopCell : UITableViewCell
 
 @end

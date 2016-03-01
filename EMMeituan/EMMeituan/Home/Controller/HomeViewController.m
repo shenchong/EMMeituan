@@ -15,7 +15,7 @@
 #import "EMFoodCell.h"
 #import "EMSmallFoods.h"
 #import "EMSmallFoodView.h"
-
+#import "EMShopCell.h"
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate>
 ///导航栏向下的箭头
 @property (nonatomic,weak)UIImageView *arrowImage;
@@ -153,6 +153,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    ///猜你喜欢Loves
     if (indexPath.section == 5) {
         if (indexPath.row == 0 ) {
             UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
@@ -173,6 +174,7 @@
         }
     }
     
+    ///热门频道hot
     if (indexPath.section == 4) {
         if (indexPath.row == 0 ) {
             UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
@@ -193,6 +195,8 @@
             return cell;
         }
     }
+    
+    ///购物商场shop
     if (indexPath.section == 3) {
         if (indexPath.row == 0 ) {
             UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
@@ -201,18 +205,19 @@
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             return cell;
         }else if (indexPath.row != 0){
-            //1 获取模型数据
-            EMLoves * models = self.loves[0];
-            //2 创建单元格
-            EMLovesCell * cell = [EMLovesCell lovesCellWithTableView:tableView ];
-            
-            //3 把模型数据赋值给单元格
-            cell.Loves = models;
+            static NSString * ID = @"Shops_cell";
+            EMShopCell * cell = [tableView dequeueReusableCellWithIdentifier:ID];
+            if (cell == nil) {
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"EMShopCell" owner:nil options:nil] lastObject];
+                //设置购物数据
+                [self setShopData:cell];
+            }
             
             //4 返回单元格
             return cell;
         }
     }
+    ///美食1元吃吃吃
     if (indexPath.section == 2) {
         if (indexPath.row == 0 ) {
             UITableViewCell * cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
@@ -240,6 +245,8 @@
         }
     }
 
+    ///2 名店抢购
+    ///1 分类Class
 
 
 #warning TODO 后续修改，根据各个单元格的具体情况修改
@@ -265,14 +272,14 @@
         if (indexPath.row == 0) {
             return 35;
         }else{
-            return 130;
+            return 110;
         }
 
     }else if(indexPath.section == 4){
         if (indexPath.row == 0) {
             return 35;
         }else{
-            return 248;
+            return 100;
         }
 
     }else if(indexPath.section == 5){
@@ -390,6 +397,12 @@
 }
 
 #pragma mark - 提取出的方法
+
+-(void)setShopData:(EMShopCell *)cell
+{
+#warning TOTO 
+    
+}
 -(void)setFoodData:(EMFoodCell *)cell
 {
     for (int i = 0; i < self.foods.count; i++) {

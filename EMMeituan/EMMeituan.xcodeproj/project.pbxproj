@@ -31,6 +31,8 @@
 		6076DFD01C848FE000545983 /* EMSmallFoodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFCF1C848FE000545983 /* EMSmallFoodView.xib */; };
 		6076DFD31C8490CE00545983 /* EMSmallFoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 6076DFD21C8490CE00545983 /* EMSmallFoods.m */; };
 		6076DFD51C8497E200545983 /* foods.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFD41C8497E200545983 /* foods.plist */; };
+		6076DFDB1C84A50B00545983 /* EMShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6076DFD91C84A50B00545983 /* EMShopCell.m */; };
+		6076DFDC1C84A50B00545983 /* EMShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6076DFDA1C84A50B00545983 /* EMShopCell.xib */; };
 		B7BC51DB1C7DF3F50045DE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */; };
 		B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51DD1C7DF4C90045DE19 /* EMTabBar.m */; };
 		B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7BC51E11C7DF59A0045DE19 /* UIView+extension.m */; };
@@ -1438,6 +1440,9 @@
 		6076DFD11C8490CE00545983 /* EMSmallFoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSmallFoods.h; sourceTree = "<group>"; };
 		6076DFD21C8490CE00545983 /* EMSmallFoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSmallFoods.m; sourceTree = "<group>"; };
 		6076DFD41C8497E200545983 /* foods.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = foods.plist; sourceTree = "<group>"; };
+		6076DFD81C84A50B00545983 /* EMShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMShopCell.h; sourceTree = "<group>"; };
+		6076DFD91C84A50B00545983 /* EMShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMShopCell.m; sourceTree = "<group>"; };
+		6076DFDA1C84A50B00545983 /* EMShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EMShopCell.xib; sourceTree = "<group>"; };
 		B70612721C7F4F48005D2A65 /* emMeituanHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanHeader.h; sourceTree = "<group>"; };
 		B70612731C7F4F57005D2A65 /* emMeituanPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = emMeituanPrefixHeader.pch; sourceTree = "<group>"; };
 		B7BC51DA1C7DF3F50045DE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -2869,6 +2874,7 @@
 		6076DF841C846C1200545983 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6076DFD61C84A48900545983 /* ShopModel */,
 				6076DFBC1C848B6200545983 /* FoodModel */,
 				6076DFA51C84719900545983 /* HotModel */,
 				6076DF851C846C1200545983 /* LoveModel */,
@@ -2888,6 +2894,7 @@
 		6076DF861C846C1200545983 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6076DFD71C84A4A400545983 /* ShopView */,
 				6076DFBD1C848B7A00545983 /* FoodView */,
 				6076DFA41C84717D00545983 /* HotView */,
 				6076DF971C846CC300545983 /* LoveView */,
@@ -2958,6 +2965,23 @@
 				6076DFCF1C848FE000545983 /* EMSmallFoodView.xib */,
 			);
 			path = FoodView;
+			sourceTree = "<group>";
+		};
+		6076DFD61C84A48900545983 /* ShopModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShopModel;
+			sourceTree = "<group>";
+		};
+		6076DFD71C84A4A400545983 /* ShopView */ = {
+			isa = PBXGroup;
+			children = (
+				6076DFD81C84A50B00545983 /* EMShopCell.h */,
+				6076DFD91C84A50B00545983 /* EMShopCell.m */,
+				6076DFDA1C84A50B00545983 /* EMShopCell.xib */,
+			);
+			path = ShopView;
 			sourceTree = "<group>";
 		};
 		B7BC51DF1C7DF5740045DE19 /* Category */ = {
@@ -5332,6 +5356,7 @@
 				D2B31B721C7D732300347D26 /* icon_survey_option_big@2x.png in Resources */,
 				D2B3176C1C7D732200347D26 /* bg_homepage_takeaway@2x.png in Resources */,
 				D2B318BF1C7D732300347D26 /* ic_canchoose_large.png in Resources */,
+				6076DFDC1C84A50B00545983 /* EMShopCell.xib in Resources */,
 				D2B319401C7D732300347D26 /* icon_common_point.png in Resources */,
 				D2B31BFC1C7D732300347D26 /* register_step3_banner.png in Resources */,
 				D2B318B01C7D732300347D26 /* cinema_line.png in Resources */,
@@ -5889,6 +5914,7 @@
 				6076DF9B1C846CD400545983 /* EMLovesCell.m in Sources */,
 				B7BC51E21C7DF59A0045DE19 /* UIView+extension.m in Sources */,
 				6076DF931C846C6A00545983 /* SearchViewController.m in Sources */,
+				6076DFDB1C84A50B00545983 /* EMShopCell.m in Sources */,
 				6076DF8A1C846C5900545983 /* HomeViewController.m in Sources */,
 				6076DFC81C848E5A00545983 /* EMSmallFoodView.m in Sources */,
 				D2B31C2E1C7D74BD00347D26 /* EMTabBarController.m in Sources */,
