@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>desc</key>
+		<string>最高立减25</string>
+		<key>title</key>
+		<string>新用户专享</string>
+		<key>icon</key>
+		<string>烤肉</string>
+	</dict>
+	<dict>
+		<key>desc</key>
+		<string>校园周边精选</string>
+		<key>title</key>
+		<string>酒店开学季</string>
+		<key>icon</key>
+		<string>烤肉</string>
+	</dict>
+	<dict>
+		<key>desc</key>
+		<string>特惠观影14.9</string>
+		<key>title</key>
+		<string>拥抱美人鱼</string>
+		<key>icon</key>
+		<string>烤肉</string>
+	</dict>
+	<dict>
+		<key>desc</key>
+		<string>闹元宵全免单</string>
+		<key>title</key>
+		<string>0元吃大餐</string>
+		<key>icon</key>
+		<string>烤肉</string>
+	</dict>
+</array>
+</plist>
