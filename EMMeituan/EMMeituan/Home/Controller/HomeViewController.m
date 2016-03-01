@@ -49,8 +49,8 @@
     //初始化tableView
     [self initTableView];
     
-    NSLog(@"猜你喜欢的数据%@",self.loves);
-    NSLog(@"美食数据%@",self.foods);
+//    NSLog(@"猜你喜欢的数据%@",self.loves);
+//    NSLog(@"美食数据%@",self.foods);
     
 }
 
