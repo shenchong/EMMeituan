@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="XeL-qV-PHt" customClass="EMSmallFoodView">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="烤肉" translatesAutoresizingMaskIntoConstraints="NO" id="Yth-Bn-eJk">
+                    <rect key="frame" x="175" y="8" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="Ra3-zZ-Hc6"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新用户专享" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQT-4Y-H7t">
+                    <rect key="frame" x="10" y="10" width="100" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最高立减25元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJU-OP-VRl">
+                    <rect key="frame" x="10" y="37" width="93" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="oJU-OP-VRl" firstAttribute="leading" secondItem="dQT-4Y-H7t" secondAttribute="leading" id="0ra-6T-Sdi"/>
+                <constraint firstItem="oJU-OP-VRl" firstAttribute="top" secondItem="dQT-4Y-H7t" secondAttribute="bottom" constant="3" id="JoO-2p-QOZ"/>
+                <constraint firstItem="dQT-4Y-H7t" firstAttribute="top" secondItem="XeL-qV-PHt" secondAttribute="top" constant="10" id="VfG-Fa-mLL"/>
+                <constraint firstItem="Yth-Bn-eJk" firstAttribute="top" secondItem="XeL-qV-PHt" secondAttribute="top" constant="8" id="dIW-1l-8nz"/>
+                <constraint firstItem="dQT-4Y-H7t" firstAttribute="leading" secondItem="XeL-qV-PHt" secondAttribute="leading" constant="10" id="iea-TH-uOq"/>
+                <constraint firstAttribute="bottom" secondItem="Yth-Bn-eJk" secondAttribute="bottom" constant="7" id="jk4-Ic-BJc"/>
+                <constraint firstAttribute="trailing" secondItem="Yth-Bn-eJk" secondAttribute="trailing" constant="10" id="smq-ht-GNY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="descLabel" destination="oJU-OP-VRl" id="hLc-Fe-9AW"/>
+                <outlet property="iconImageView" destination="Yth-Bn-eJk" id="1bu-1g-Azv"/>
+                <outlet property="titleLabel" destination="dQT-4Y-H7t" id="gAs-yC-g2r"/>
+            </connections>
+            <point key="canvasLocation" x="-668" y="-57"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="烤肉" width="353" height="214"/>
+    </resources>
+</document>
