@@ -13,6 +13,8 @@
 @interface EMMerchantViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *merchantListSource;
+@property (nonatomic, strong) UIButton *maskView;
+
 @end
 
 @implementation EMMerchantViewController
@@ -93,6 +95,9 @@
     filterView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:filterView];
     
+    //遮罩页
+    [self initMaskView];
+    
     NSArray *filterName = @[@"全部",@"全部",@"智能排序"];
     //筛选
     for (int i = 0; i < 3; i++) {
@@ -104,7 +109,7 @@
         [filterBtn setTitle:filterName[i] forState:UIControlStateNormal];
         [filterBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [filterBtn setTitleColor:My_Color(33, 192, 174) forState:UIControlStateSelected];
-//        [filterBtn addTarget:self action:@selector(OnFilterBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [filterBtn addTarget:self action:@selector(OnFilterBtn:) forControlEvents:UIControlEventTouchUpInside];
         [filterView addSubview:filterBtn];
         
         //三角
@@ -121,6 +126,7 @@
     lineView.backgroundColor = My_Color(192, 192, 192);
     [filterView addSubview:lineView];
     
+    
     //tableview
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64+40, SCREEN_WIDTH, SCREEN_HEIGHT-64-40-49) style:UITableViewStylePlain];
     self.tableView.delegate = self;
@@ -129,6 +135,31 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     
+}
+
+// 设置遮罩页
+- (void)initMaskView{
+    _maskView = [[UIButton alloc]initWithFrame:CGRectMake(0, 64+40, SCREEN_WIDTH, SCREEN_HEIGHT-64-40-49)];
+    _maskView.alpha = 0.5;
+    _maskView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:_maskView];
+    
+    _maskView.hidden = YES;
+    [_maskView addTarget:self action:@selector(maskHidden:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIView *tempView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, _maskView.frame.size.height-90)];
+    tempView.backgroundColor = [UIColor redColor];
+    [self.maskView addSubview:tempView];
+    
+}
+
+- (void)maskHidden:(UIButton *)sender{
+    _maskView.hidden = YES;
+}
+
+- (void)OnFilterBtn:(UIButton *)sender{
+    [self.view bringSubviewToFront:_maskView];
+    _maskView.hidden = NO;
 }
 
 // 获取商家列表
