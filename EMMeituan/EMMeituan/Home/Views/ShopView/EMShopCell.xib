@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,9 +14,22 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="109.5"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <color key="backgroundColor" red="0.90196078430000004" green="0.41960784309999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwt-d1-wjP">
+                        <rect key="frame" x="8" y="8" width="472" height="93.5"/>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dwt-d1-wjP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="E8V-Pr-mDv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dwt-d1-wjP" secondAttribute="trailing" constant="-8" id="TX9-Yb-qtv"/>
+                    <constraint firstItem="dwt-d1-wjP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="YOI-kt-l9G"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="dwt-d1-wjP" secondAttribute="bottom" id="g91-FF-uE1"/>
+                </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="208" y="237"/>
+            <connections>
+                <outlet property="scrollView" destination="dwt-d1-wjP" id="e4g-J6-IpA"/>
+            </connections>
+            <point key="canvasLocation" x="244" y="181"/>
         </tableViewCell>
     </objects>
 </document>
