@@ -19,6 +19,7 @@
 		B7BC51E61C7E23F10045DE19 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51E31C7E23F10045DE19 /* Default-568h@2x.png */; };
 		B7BC51E71C7E23F10045DE19 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51E41C7E23F10045DE19 /* Default.png */; };
 		B7BC51E81C7E23F10045DE19 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51E51C7E23F10045DE19 /* Default@2x.png */; };
+		D22A3A2B1C8EE5C900A357CF /* homeServiceWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22A3A2A1C8EE5C900A357CF /* homeServiceWebViewController.m */; settings = {ASSET_TAGS = (); }; };
 		D26F3DD51C817E7F00071DC5 /* homeServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D26F3DD31C817E7F00071DC5 /* homeServiceCollectionViewCell.m */; };
 		D26F3DD61C817E7F00071DC5 /* homeServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26F3DD41C817E7F00071DC5 /* homeServiceCollectionViewCell.xib */; };
 		D26F3DDA1C81A51D00071DC5 /* homeServiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D26F3DD91C81A51D00071DC5 /* homeServiceModel.m */; };
@@ -1457,6 +1458,8 @@
 		B7BC51E31C7E23F10045DE19 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B7BC51E41C7E23F10045DE19 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B7BC51E51C7E23F10045DE19 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D22A3A291C8EE5C900A357CF /* homeServiceWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeServiceWebViewController.h; sourceTree = "<group>"; };
+		D22A3A2A1C8EE5C900A357CF /* homeServiceWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeServiceWebViewController.m; sourceTree = "<group>"; };
 		D26F3DD21C817E7F00071DC5 /* homeServiceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeServiceCollectionViewCell.h; sourceTree = "<group>"; };
 		D26F3DD31C817E7F00071DC5 /* homeServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeServiceCollectionViewCell.m; sourceTree = "<group>"; };
 		D26F3DD41C817E7F00071DC5 /* homeServiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = homeServiceCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -2985,6 +2988,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		D22A3A281C8EE5A800A357CF /* homeServiceWeb */ = {
+			isa = PBXGroup;
+			children = (
+				D22A3A291C8EE5C900A357CF /* homeServiceWebViewController.h */,
+				D22A3A2A1C8EE5C900A357CF /* homeServiceWebViewController.m */,
+			);
+			name = homeServiceWeb;
+			sourceTree = "<group>";
+		};
 		D26F3DD11C817E3600071DC5 /* homeServiceCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -3086,6 +3098,7 @@
 		D2B3117E1C7D6DF500347D26 /* EMMeituan */ = {
 			isa = PBXGroup;
 			children = (
+				D22A3A281C8EE5A800A357CF /* homeServiceWeb */,
 				B78CBD901C817D0B00D2BEC0 /* Merchant */,
 				B70612751C7F5587005D2A65 /* More */,
 				B78CBD8A1C816EEF00D2BEC0 /* homeService */,
@@ -6154,6 +6167,7 @@
 				D2CAF3561C8451DD002892E3 /* MJRefreshGifHeader.m in Sources */,
 				D2AEE81D1C83299000407BFA /* MJConst.m in Sources */,
 				D2CAF30E1C8439D0002892E3 /* MKAnnotationView+WebCache.m in Sources */,
+				D22A3A2B1C8EE5C900A357CF /* homeServiceWebViewController.m in Sources */,
 				D2CAF3511C8451DD002892E3 /* MJRefreshAutoNormalFooter.m in Sources */,
 				D2AEE8061C83218200407BFA /* AFNetworkReachabilityManager.m in Sources */,
 				D2CAF3121C8439D0002892E3 /* SDWebImageDecoder.m in Sources */,
@@ -6303,6 +6317,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EMMeituan/emMeituanPrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = EMMeituan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -6317,6 +6332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/EMMeituan/emMeituanPrefixHeader.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = EMMeituan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

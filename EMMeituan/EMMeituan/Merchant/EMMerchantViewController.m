@@ -151,7 +151,7 @@
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
     [session GET:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSLog(@"responseObject==%@",responseObject);
+        //NSLog(@"responseObject==%@",responseObject);
         
         NSMutableArray *dataArray = [responseObject objectForKey:@"data"];
         

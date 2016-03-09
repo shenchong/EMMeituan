@@ -15,13 +15,6 @@
 }
 
 
--(id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
 
 - (homeServiceCollectionViewCell *)initWithModel:(homeServiceModel *)model {
     

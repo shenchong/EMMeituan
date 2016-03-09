@@ -11,11 +11,14 @@
 
 @interface homeServiceCollectionViewCell : UICollectionViewCell
 
-- (homeServiceCollectionViewCell *)initWithModel:(homeServiceModel *)model;
-
 
 @property (weak, nonatomic) IBOutlet UIImageView *cellBackgroundImageView;
 @property (weak, nonatomic) IBOutlet UILabel *cellBackgroundLabel;
+
+
+- (homeServiceCollectionViewCell *)initWithModel:(homeServiceModel *)model;
+
+
 
 
 @end
