@@ -40,7 +40,7 @@
 }
 
 - (void)getServiceAdvData {
-    NSString *urlStr = @"http://vip.yijia.com/shop_app/data/tmp_vip_get_data.php";
+    NSString *urlStr = @"http://vip.yijia.com/shop_app/data/tmp_vip_get_data.php?kind=1";
     
     AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
     
@@ -56,7 +56,6 @@
         [homeServiceArray removeAllObjects];
         
         NSMutableArray *dataArray = [(NSDictionary *)responseObject objectForKey:@"list"];
-        NSLog(@"%@",dataArray);
         for (int i = 0; i < dataArray.count; i++) {
             homeServiceModel *model = [homeServiceModel objectWithKeyValues:dataArray[i]];
             [homeServiceArray addObject:model];
@@ -81,7 +80,7 @@
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     flowLayout.headerReferenceSize = CGSizeMake(0, 0);
 //    [flowLayout setItemSize:CGSizeMake(SCREEN_WIDTH/2-6, 200*(SCREEN_HEIGHT/1000.0))];
-    _downCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAV_HEIGHT-TABAR_HEIGHT ) collectionViewLayout:flowLayout];
+    _downCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAV_HEIGHT-TABAR_HEIGHT-50 ) collectionViewLayout:flowLayout];
     _downCollectionView.backgroundColor = kUIColorFromRGB(0xe0e3ea, 1);
 //    _downCollectionView.bounces = YES;
     _downCollectionView.delegate = self;
@@ -112,7 +111,10 @@
     homeServiceModel *model = homeServiceArray[indexPath.row];
     cell.cellBackgroundLabel.text = model.title;
     [cell.cellBackgroundImageView sd_setImageWithURL:[NSURL URLWithString:model.picUrl] placeholderImage:nil];
-    cell.backgroundColor = [UIColor redColor];
+    cell.oldPrice.text = [NSString stringWithFormat:@"¥%@",model.reservePrice];
+    cell.nowPrice.text = [NSString stringWithFormat:@"¥%@",model.salePrice];
+    cell.monthSell.text = [NSString stringWithFormat:@"月售%@",model.monthSell];
+    cell.backgroundColor = [UIColor whiteColor];
     return cell;
 }
 
@@ -132,7 +134,7 @@
     homeServiceModel *model = homeServiceArray[indexPath.row];
     NSString *urlStr = [NSString stringWithFormat:@"http://cloud.yijia.com/goto/item.php?app_id=3274372329&app_oid=0584ae39d88a53a399a5bbc1d934adc2&app_dtoken=be9d3bba55d2ab63cdee0023aac441c38a7ec9fe8ed9d92c6dea3036f44d9a32&app_version=1.0.7&app_channel=AppStore&id=%@&sche=tiantiantehui",model.auctionId];
     homeServiceWebViewController *webViewController = [[homeServiceWebViewController alloc]init];
-    webViewController.hidesBottomBarWhenPushed = YES;
+//    webViewController.hidesBottomBarWhenPushed = YES;
     webViewController.strUrl = urlStr;
     [self.navigationController pushViewController:webViewController animated:YES];
 }

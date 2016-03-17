@@ -14,6 +14,9 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *cellBackgroundImageView;
 @property (weak, nonatomic) IBOutlet UILabel *cellBackgroundLabel;
+@property (weak, nonatomic) IBOutlet UILabel *oldPrice;
+@property (weak, nonatomic) IBOutlet UILabel *nowPrice;
+@property (weak, nonatomic) IBOutlet UILabel *monthSell;
 
 
 - (homeServiceCollectionViewCell *)initWithModel:(homeServiceModel *)model;

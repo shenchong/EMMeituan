@@ -19,6 +19,11 @@
 - (homeServiceCollectionViewCell *)initWithModel:(homeServiceModel *)model {
     
     homeServiceCollectionViewCell *cell = [[homeServiceCollectionViewCell alloc]init];
+    [cell.cellBackgroundLabel sizeToFit];
+    [cell.oldPrice sizeToFit];
+    [cell.nowPrice sizeToFit];
+    [cell.monthSell sizeToFit];
+    
     return cell;
 }
 
