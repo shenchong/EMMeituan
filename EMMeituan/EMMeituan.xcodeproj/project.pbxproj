@@ -20,6 +20,8 @@
 		B7BC51E71C7E23F10045DE19 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51E41C7E23F10045DE19 /* Default.png */; };
 		B7BC51E81C7E23F10045DE19 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BC51E51C7E23F10045DE19 /* Default@2x.png */; };
 		D22A3A2B1C8EE5C900A357CF /* homeServiceWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D22A3A2A1C8EE5C900A357CF /* homeServiceWebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D239759B1C9A9036000961CF /* JSDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D23975991C9A9036000961CF /* JSDropDownMenu.m */; settings = {ASSET_TAGS = (); }; };
+		D239759C1C9A9036000961CF /* ico_make.png in Resources */ = {isa = PBXBuildFile; fileRef = D239759A1C9A9036000961CF /* ico_make.png */; settings = {ASSET_TAGS = (); }; };
 		D26F3DD51C817E7F00071DC5 /* homeServiceCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D26F3DD31C817E7F00071DC5 /* homeServiceCollectionViewCell.m */; };
 		D26F3DD61C817E7F00071DC5 /* homeServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D26F3DD41C817E7F00071DC5 /* homeServiceCollectionViewCell.xib */; };
 		D26F3DDA1C81A51D00071DC5 /* homeServiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D26F3DD91C81A51D00071DC5 /* homeServiceModel.m */; };
@@ -1460,6 +1462,9 @@
 		B7BC51E51C7E23F10045DE19 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D22A3A291C8EE5C900A357CF /* homeServiceWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeServiceWebViewController.h; sourceTree = "<group>"; };
 		D22A3A2A1C8EE5C900A357CF /* homeServiceWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeServiceWebViewController.m; sourceTree = "<group>"; };
+		D23975981C9A9036000961CF /* JSDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDropDownMenu.h; sourceTree = "<group>"; };
+		D23975991C9A9036000961CF /* JSDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDropDownMenu.m; sourceTree = "<group>"; };
+		D239759A1C9A9036000961CF /* ico_make.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_make.png; sourceTree = "<group>"; };
 		D26F3DD21C817E7F00071DC5 /* homeServiceCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeServiceCollectionViewCell.h; sourceTree = "<group>"; };
 		D26F3DD31C817E7F00071DC5 /* homeServiceCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeServiceCollectionViewCell.m; sourceTree = "<group>"; };
 		D26F3DD41C817E7F00071DC5 /* homeServiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = homeServiceCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -2997,6 +3002,16 @@
 			name = homeServiceWeb;
 			sourceTree = "<group>";
 		};
+		D23975971C9A9036000961CF /* JSDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D23975981C9A9036000961CF /* JSDropDownMenu.h */,
+				D23975991C9A9036000961CF /* JSDropDownMenu.m */,
+				D239759A1C9A9036000961CF /* ico_make.png */,
+			);
+			path = JSDropDownMenu;
+			sourceTree = "<group>";
+		};
 		D26F3DD11C817E3600071DC5 /* homeServiceCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -3021,6 +3036,7 @@
 		D2AEE7F61C83212F00407BFA /* third */ = {
 			isa = PBXGroup;
 			children = (
+				D23975971C9A9036000961CF /* JSDropDownMenu */,
 				D2CAF31E1C8451DD002892E3 /* MJRefresh */,
 				D2CAF2EC1C8439D0002892E3 /* SDWebImage */,
 				D2AEE80B1C83299000407BFA /* MJExtension */,
@@ -5430,6 +5446,7 @@
 				D2B31B6C1C7D732300347D26 /* icon_survey_background@2x.png in Resources */,
 				D2B319091C7D732300347D26 /* icon_camera_shot_disabled@2x.png in Resources */,
 				D2B3172E1C7D732200347D26 /* bg_collection_header@2x.png in Resources */,
+				D239759C1C9A9036000961CF /* ico_make.png in Resources */,
 				D2B318E81C7D732300347D26 /* Icon-120.png in Resources */,
 				D2B319E21C7D732300347D26 /* icon_image_picker_preview_normal.png in Resources */,
 				D2B318D31C7D732300347D26 /* ic_comment_social_share_weixin_normal@2x.png in Resources */,
@@ -6119,6 +6136,7 @@
 				D2CAF3581C8451DD002892E3 /* MJRefreshStateHeader.m in Sources */,
 				D2CAF3501C8451DD002892E3 /* MJRefreshAutoGifFooter.m in Sources */,
 				B78CBD991C81EF6000D2BEC0 /* EMMerchantModel.m in Sources */,
+				D239759B1C9A9036000961CF /* JSDropDownMenu.m in Sources */,
 				B7BC51DE1C7DF4C90045DE19 /* EMTabBar.m in Sources */,
 				D2AEE81F1C83299000407BFA /* MJProperty.m in Sources */,
 				D26F3DD51C817E7F00071DC5 /* homeServiceCollectionViewCell.m in Sources */,
